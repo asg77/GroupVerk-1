@@ -1,0 +1,113 @@
+header{
+    color: #000000;
+    background-color: #afb281;
+    margin: 0 auto;
+    padding-top: 10px;
+    padding-bottom: 1em;
+    margin-bottom: 60px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.buff{
+    display: flex;
+    
+}
+
+header ul{
+    margin-top: 10px;
+
+    display: flex;
+
+    list-style: none;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+header li{
+    margin-right: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.cart__img{
+    width: 30px;
+    height: 20px;
+}
+
+h1{
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Oswald';
+    margin-bottom: 20px;
+}
+
+
+.links {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dir {
+    width: 100%;
+}
+
+.dir:nth-child(3){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    padding-top: 20px;
+}
+
+@media (min-width:800px) {
+
+    .links{
+        flex-direction: row;
+    }
+
+    .dir {
+        width: 33%;
+    }
+
+    .dir:nth-child(3){
+        justify-content: flex-end;
+        padding-top: 0;
+    }
+
+}
+
+.cart{
+    display: flex;
+    justify-content: flex-end;
+}
+
+header a:link {
+    color: #000000;
+    text-decoration: none;
+    background-color: transparent;
+
+    -o-transition:color .2s ease-out, background 2s ease-in;
+    -ms-transition:color .2s ease-out, background 2s ease-in;
+    -moz-transition:color .2s ease-out, background 2s ease-in;
+    -webkit-transition:color .2s ease-out, background 2s ease-in;
+    transition:color .2s ease-out, background 2s ease-in;
+}
+
+header a:visited {
+    color :#000000;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+header a:hover {
+    color: #fcffd2;
+    background-color: transparent;
+    text-decoration: none;
+}
