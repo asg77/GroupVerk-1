@@ -21,7 +21,14 @@ html { /* stylelint-disable-line */
 
 
 // TODO sækja allar sass skrár
-@import "scss/index";
-@import "scss/footer";
-@import "scss/header";
 @import "scss/button";
+@import "scss/cart";
+@import "scss/employee";
+@import "scss/employees";
+@import "scss/footer";
+@import "scss/form";
+@import "scss/header";
+@import "scss/nav";
+@import "scss/product";
+@import "scss/products";
+@import "scss/section";
