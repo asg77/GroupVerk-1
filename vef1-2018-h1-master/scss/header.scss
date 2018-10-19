@@ -3,14 +3,9 @@ header{
     background-color: #afb281;
     margin: 0 auto;
     padding-top: 10px;
-    padding-bottom: 1em;
-    margin-bottom: 60px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.buff{
-    display: flex;
-    
+    padding-bottom: 20px;
+    margin-bottom: 40px; 
+    font-family: 'Open sans';
 }
 
 header ul{
@@ -21,23 +16,26 @@ header ul{
     list-style: none;
     justify-content: center;
     margin: 0 auto;
+    letter-spacing: 1px;
 }
 
 header li{
     margin-right: 10px;
     margin-left: 10px;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 .cart__img{
     width: 30px;
     height: 20px;
+    vertical-align: middle;
 }
 
-h1{
+header h1{
     text-align: center;
-    font-size: 48px;
+    font-size: 3.75rem;
     font-family: 'Oswald';
+    font-weight: 500;
     margin-bottom: 20px;
 }
 
@@ -47,22 +45,15 @@ h1{
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-content: stretch;
-    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-.dir {
-    width: 100%;
-}
 
 .dir:nth-child(3){
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    align-content: stretch;
     padding-top: 20px;
 }
 
@@ -73,14 +64,20 @@ h1{
     }
 
     .dir {
-        width: 33%;
+        width: 33.3%;
     }
 
     .dir:nth-child(3){
         justify-content: flex-end;
         padding-top: 0;
     }
+}
 
+@media (max-width: 1260px){
+    .dir:nth-child(3){
+        padding-right: 20px;
+    }
+    
 }
 
 .cart{
@@ -98,6 +95,10 @@ header a:link {
     -moz-transition:color .2s ease-out, background 2s ease-in;
     -webkit-transition:color .2s ease-out, background 2s ease-in;
     transition:color .2s ease-out, background 2s ease-in;
+}
+
+header .nav__link:link {
+    text-decoration: underline;
 }
 
 header a:visited {
