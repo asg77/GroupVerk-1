@@ -1,0 +1,35 @@
+@import "scss/config";
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html { /* stylelint-disable-line */
+  box-sizing: border-box; 
+  overflow-x: hidden;
+  font-size: 16px;
+  font-family: 'Open sans';
+  // TODO fleiri grunn stillingar
+}
+
+
+
+// TODO sækja allar sass skrár
+@import "scss/button";
+@import "scss/cart";
+@import "scss/employee";
+@import "scss/employees";
+@import "scss/footer";
+@import "scss/form";
+@import "scss/header";
+@import "scss/nav";
+@import "scss/product";
+@import "scss/products";
+@import "scss/section";

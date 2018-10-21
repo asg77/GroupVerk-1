@@ -1,0 +1,87 @@
+footer{
+    color: #000000;
+    background-color: #cc9694;
+
+    padding-top: 60px;
+    padding-bottom: 40px;
+    margin-top: 10px;
+    font-family: 'Open sans';
+}
+
+footer h2 {
+    font-family: Verdana;
+    font-size: 1.3125rem;
+    padding-bottom: 20px;
+}
+
+footer p{
+    text-align: center;
+}
+
+footer a:link {
+    color: #fcffd2;
+    text-decoration: none;
+    background-color: transparent;
+
+    -o-transition:color .2s ease-out, background 2s ease-in;
+    -ms-transition:color .2s ease-out, background 2s ease-in;
+    -moz-transition:color .2s ease-out, background 2s ease-in;
+    -webkit-transition:color .2s ease-out, background 2s ease-in;
+    transition:color .2s ease-out, background 2s ease-in;
+}
+
+footer a:visited {
+    color :#fcffd2;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+footer a:hover {
+    color: #000000;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.foot__lists {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+      
+footer ul {
+    list-style: none;
+    padding-top: 10px;
+}
+      
+footer li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+      
+.foot__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+      
+.foot__col {
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+   
+@media (min-width: 1000px) {
+    .foot__col {
+        width: 25%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .foot__lists { 
+      padding: 0;
+    }
+}
