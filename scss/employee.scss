@@ -1,15 +1,6 @@
-#employee1 {
-  background-image: url('../img/karolina.jpg');
-}
 
-#employee2 {
-  background-image: image('../img/tomas.jpg');
-}
-
-#employee3 {
-  background-image: url('../img/anna.jpg');
-}
-
-#employee4 {
-  background-image: url('../img/jon.jpg');
+.flip-container {
+  position: relative;
+  -webkit-perspective: 1000;
+  perspective: 1000;
 }

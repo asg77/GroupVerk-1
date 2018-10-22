@@ -64,37 +64,10 @@
 }
 
 .product__text {
-  font-size: 1em;
-
-  overflow: auto;
+  font-size: 1.10rem;
+  overflow: visible;
 }
 
 .prices {
   overflow: auto;
-}
-
-@media (max-width: 699px) {
-  .product {
-    max-width: initial;
-    max-height: initial;
-    border: none;
-    border-bottom: 2px solid #aaa;
-    border-radius: 0;
-
-    padding: 0;
-    padding-bottom: 20px;
-  }
-
-  .product__content {
-    flex-direction: column;
-  }
-
-  .product__text {
-    margin-bottom: 20px;
-
-  }
-
-  .product__image {
-    padding-left: 0;
-  }
 }

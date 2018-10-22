@@ -1,7 +1,60 @@
-.flip-container {
-  position: relative;
-  -webkit-perspective: 1000;
-  perspective: 1000;
+
+
+.employee_row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 10px;
+  margin-right:  10px;
+}
+
+.employee_col {
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 700px) {
+  .flip-container {
+    margin-bottom: 40px;
+  }
+
+  .employee__col {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product__col {
+    width: 33.3333333%;
+  }
+}
+
+.employees {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 20px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 1200px;
+}
+
+.front-card {
+  z-index: 2;
+  padding-left: 0px;
+  flex: 10 10 100px;
+}
+
+.employee {
+  max-width: 100%;
+}
+
+.reverse-card {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY( 180deg );
 }
 
 .flip-cards {
@@ -31,14 +84,4 @@
   border-radius: 15px;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-}
-
-.front-card {
-  z-index: 2;
-  background-image: url(img/karolina.jpg);
-}
-
-.reverse-card {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY( 180deg );
 }
