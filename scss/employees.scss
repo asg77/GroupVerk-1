@@ -1,22 +1,27 @@
 .employee_row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: 10px;
-  margin-right:  10px;
 }
 
 .employee_col {
   padding-left: 10px;
   padding-right: 10px;
-  margin-bottom: 20px;
+}
+
+
+@media (min-width: 1000px) {
+  .employee_row {
+    flex-direction: row;
+  }
+
+  .employee_col {
+    margin-bottom: 340px;
+  }
 }
 
 .employees {
   display: flex;
   flex-direction: column;
-
-  float: left;
-  width: 33.33%;
 }
 
 .employee {
@@ -26,27 +31,18 @@
 
 
 .front-card {
-  padding-left: 0px;
-
+  padding-left: 10px;
 }
 
 .reverse-card {
   -webkit-transform: rotateY(180deg);
   transform: rotateY( 180deg );
 
-  margin-bottom: 40px;
   font-size: 1.5rem;
   font-family: 'Oswald';
 
   text-align: center;
 }
-
-.reverse-card p {
-   font-size: 1.5rem;
-   text-align: center;
-
-   font-family: 'Oswald'
- }
 
 .flip-cards {
   width: 400px;
