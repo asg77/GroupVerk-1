@@ -23,6 +23,9 @@
 .front-card {
  display: flex;
  flex-wrap: wrap;
+
+ padding-left: 0px;
+ flex: 10 10 100px;
 }
 
 .reverse-card {
@@ -44,12 +47,18 @@
  }
 
 .flip-cards {
-  width: 200px;
+  width: 100px;
   height: 291px;
 
+  display: flex;
+  flex-wrap: wrap;
+
+  padding-left: 0px;
+  flex: 10 10 100px;
+
   margin-left: 5px;
-  -webkit-transition: all 1s ease;
-  transition: all 1s ease;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
