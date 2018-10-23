@@ -32,25 +32,25 @@
 
 .employees {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
 
   margin-bottom: 20px;
   padding: 0px;
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  max-height: 1200px;
 }
 
 .front-card {
   z-index: 2;
-  padding-left: 0px;
-  flex: 10 10 100px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  max-width: 1200px;
+  max-height: 1200px;
+
+  width: 50%;
+  height: 50%;
 }
 
-.employee {
-  max-width: 100%;
-}
 
 .reverse-card {
   -webkit-transform: rotateY(180deg);
