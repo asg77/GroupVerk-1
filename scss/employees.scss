@@ -16,16 +16,17 @@
   display: flex;
   flex-wrap: wrap;
 
-  margin-bottom: 20px;
-  padding: 0px;
+  margin-bottom: 10px;
 }
 
-.front-card {
- display: flex;
- flex-wrap: wrap;
+.employee {
+  max-width: 100%;
+  height: auto;
+}
 
- padding-left: 0px;
- flex: 10 10 100px;
+
+.front-card {
+
 }
 
 .reverse-card {
@@ -47,14 +48,8 @@
  }
 
 .flip-cards {
-  width: 100px;
+  width: 200px;
   height: 291px;
-
-  display: flex;
-  flex-wrap: wrap;
-
-  padding-left: 0px;
-  flex: 10 10 100px;
 
   margin-left: 5px;
   -webkit-transition: all 0.5s ease;
