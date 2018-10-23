@@ -51,14 +51,14 @@ main {
     .grid__row {
         flex-direction: row;
     }
-  
+
     .grid__col {
         width: 50%;
         margin-bottom: 40px;
         padding-bottom: 0;
         padding-top: 0;
     }
-  
+
     .grid__row:nth-child(2n) .grid__col:first-child {
         order: 2;
     }
@@ -69,7 +69,7 @@ main {
         left: 50%;
         transform: translate(-50%, -50%);
     }
-}  
+}
 
 @media (min-width: 1270px){
     .grid__col:nth-child(1) {
@@ -83,7 +83,7 @@ main {
 }
 
 @media (min-width: 1340px) {
-    main { 
+    main {
         padding: 0;
     }
 }
