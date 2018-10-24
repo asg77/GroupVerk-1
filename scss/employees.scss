@@ -56,11 +56,10 @@
   height: 250px;
 
   margin-left: 100px;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-
 }
 
 .flip-cards:hover {
@@ -79,6 +78,5 @@
 }
 
 .names {
-  padding: 5px;
   margin-top: 300px;
 }
