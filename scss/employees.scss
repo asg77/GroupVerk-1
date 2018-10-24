@@ -1,11 +1,18 @@
+
+.flip-container {
+  position: relative;
+}
+
 .employee_row {
   display: flex;
   flex-wrap: wrap;
+
+  margin: -15px;
 }
 
 .employee_col {
-  padding-right: -20px;
-  padding-left: -20px;
+  padding-right: -10px;
+  padding-left: -10px;
 }
 
 
