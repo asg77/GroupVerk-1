@@ -1,3 +1,18 @@
+# Project Info
+
+Authors: Alexander Sveinn G. Kristjansson - asg77 -, Stefi Carpio Agaloos - sca1 - 
+
+
+The project should open on the index page, it has a header and footer that is on all pages and contains links to the other pages. The header has the title of the page and links to each of the other pages while having the page you're on underlined unless it's the cart page. The footer has four lists of links, the only links that do anything is Siðir list which takes you to each page except the index. Each page should chang layout depending on the size of the window. The buttons don't do anything when clicked.
+
+The [index](index.html) is in the root while all other html files are kept in [pages](pages/). There are scss files for each page along with files for the header, footer and buttons. All scss is kept in [scss](scss/) which all adds to [styles.css](styles.css) which is loacated at the root. syles.scss adds the other scss code into styles.css.  The images used are kept in [img](img/).
+
+The project was worked on by two people. Each did the following.
+
+Alexander S. - asg77 - : index(Forsíða) html and css, cart(Karfa) html and css, footer html and css, header html and css, button css.
+
+Stefi C. - sca1 - : staff(Starfsfólk) html and css, and products(Vörur) html and css.
+
 
 # Hópverkefni 1
 
