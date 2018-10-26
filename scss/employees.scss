@@ -1,102 +1,187 @@
+@import "config";
 
-.grid_row {
-  display: flex;
-  flex-wrap: wrap;
+.employees {
+  max-width: $max-width;
+  // position: relative;
+  margin: 0 auto;
 
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-.grid_col {
-  padding-right: -10px;
-  padding-left: -10px;
-  width: 100%;
-
-  margin-bottom: 20px;
-}
-
-.grid_row:nth-child(2n) .grid_col:first-child {
-  order: 2;
-}
-
-@media (min-width: 1000px) {
-  .grid_row {
-    flex-direction: row;
+  @media (max-width: $max-width -1) {
+    padding-left: $gutter;
+    padding-right: $gutter;
   }
 
-  .grid_col {
-    margin-bottom: 950px;
-    width: 50%;
+  &__row {
+    @include row;
+    margin-bottom: $gutter * 2;
+    flex-wrap: wrap;
   }
 
-  .grid_row:nth-child(2n) .grid_col:first-child {
-    order: 0;
+  &__col {
+    @include columns(12);
+    margin-bottom: $gutter * 2;
+
+    @media (min-width: 500px) {
+      @include columns(6);
+    }
   }
-}
-
-
-
-.flip_cards {
-  display: flex;
-  flex-direction: column;
-
-  margin-bottom: 20px;
-  padding: 0px;
-  width: 100%;
-  height: 100%;
-  max-width: 1200px;
-  max-height: 1200px;
-
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-}
-
-.flip_cards:hover {
-  transform: rotateY( 180deg );
-  -webkit-transform: rotateY(180deg);
-}
-
-.flip_cards div {
-  display: flex;
-  flex-direction: column;
-
-  width: 600px;
-
-  position: absolute;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-
-.front_card {
-  padding: 10px;
-
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
-.reverse_card {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY( 180deg );
-
-  font-size: 1.30rem;
-  font-family: 'Oswald';
-  text-align: center;
 }
 
 .employee {
-  max-width: 800px;
-  height: 900px;
+  position: relative;
+  overflow: hidden;
 
-  padding-left: 0px;
-  flex: 10 10 100px;
-}
+  &::before {
+    display: block;
+    padding-top: 150%;
+    content: "";
+  }
 
+  &__card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 
-.card_body {
-    font-size: 1.30rem;
-    font-family: 'Oswald';
+    transition: transform $transition;
+    transform-style: preserve-3d;
+  }
+
+  &__front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+
+  &__reverse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+  }
+  &:hover &__card {
+    transform: rotateY(180deg);
+  }
+
+  &__content {
+    display: flex;
+    height: 100%;
+    font-size: 1.5rem;
     text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__name {
+    margin-bottom: $gutter;
+    font-family: $font-heading;
+    font-size: 2.25rem;
+    font-weight: 600;
+  }
 }
+
+// .grid_row {
+//   display: flex;
+//   flex-wrap: wrap;
+//
+//   margin-left: 10px;
+//   margin-right: 10px;
+// }
+//
+// .grid_col {
+//   padding-right: -10px;
+//   -left: -10px;
+//   width: 100%;
+//
+//   position: relative;
+//
+//   margin-bottom: -20px;
+// }
+//
+// .grid_row:nth-child(2n) .grid_col:first-child {
+//   order: 2;
+// }
+//
+// @media (min-width: 1000px) {
+//   .grid_row {
+//     position: relative;
+//     flex-direction: row;
+//   }
+//
+//   .grid_col {
+//     position: relative;
+//     flex-direction: row;
+//   }
+//
+//   .grid_row:nth-child(2n) .grid_col:first-child {
+//     order: 0;
+//   }
+// }
+//
+
+// .flip_cards {
+//   display: flex;
+//   flex-direction: column;
+//
+//   margin-bottom: -20px;
+//
+//   -webkit-transition: all 0.3s ease;
+//   transition: all 0.3s ease;
+//   -webkit-transform-style: preserve-3d;
+//   transform-style: preserve-3d;
+// }
+//
+// .flip_cards:hover {
+//   transform: rotateY( 180deg );
+//   -webkit-transform: rotateY(180deg);
+// }
+//
+// .flip_cards div {
+//   display: flex;
+//   flex-direction: column;
+//
+//   width: 600px;
+//   margin: 0 auto;
+//
+//   position: relative;
+//   backface-visibility: hidden;
+//   -webkit-backface-visibility: hidden;
+// }
+//
+//
+// .front_card {
+//   padding: 10px;
+//
+//   margin-left: -10px;
+//   margin-right: -10px;
+// }
+//
+// .reverse_card {
+//   -webkit-transform: rotateY(180deg);
+//   transform: rotateY( 180deg );
+//
+//   font-size: 1.30rem;
+//   font-family: 'Oswald';
+//   text-align: center;
+// }
+//
+// .employee {
+//   max-width: 800px;
+//   height: 900px;
+//
+//   padding-left: 0px;
+//   flex: 10 10 100px;
+//
+// }
+//
+// .card_body {
+//     font-size: 1.30rem;
+//     font-family: 'Oswald';
+//     text-align: center;
+//
+//     margin-right: 10px;
+//     margin-left: 10px;
+// }
