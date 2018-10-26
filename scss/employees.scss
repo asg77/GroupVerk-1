@@ -1,84 +1,104 @@
 
-.flip-container {
-  position: relative;
-}
-
-.employee_row {
+.grid_row {
   display: flex;
   flex-wrap: wrap;
 
-  margin: -15px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
-.employee_col {
+.grid_col {
   padding-right: -10px;
   padding-left: -10px;
+  width: 100%;
+
+  margin-bottom: 20px;
 }
 
+.grid_row:nth-child(2n) .grid_col:first-child {
+  order: 2;
+}
 
 @media (min-width: 1000px) {
-  .employee_row {
+  .grid_row {
     flex-direction: row;
   }
 
-  .employee_col {
-    margin-bottom: 475px;
+  .grid_col {
+    margin-bottom: 950px;
+    width: 50%;
+  }
+
+  .grid_row:nth-child(2n) .grid_col:first-child {
+    order: 0;
   }
 }
 
-.employees {
+
+
+.flip_cards {
   display: flex;
   flex-direction: column;
-}
 
-.employee {
-  width: 120%;
-}
+  margin-bottom: 20px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  max-width: 1200px;
+  max-height: 1200px;
 
-
-.front-card {
-  padding-left: 10px;
-
-}
-
-.reverse-card {
-  -webkit-transform: rotateY(180deg);
-  transform: rotateY( 180deg );
-
-  font-size: 1.30rem;
-  font-family: 'Oswald';
-
-  text-align: center;
-
-  padding: 10px;
-}
-
-.flip-cards {
-  width: 400px;
-  height: 250px;
-
-  margin-left: 100px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-.flip-cards:hover {
+.flip_cards:hover {
   transform: rotateY( 180deg );
   -webkit-transform: rotateY(180deg);
 }
 
-.flip-cards div {
+.flip_cards div {
+  display: flex;
+  flex-direction: column;
+
+  width: 600px;
 
   position: absolute;
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
-
-  width: 400px;
-  height: 250px;
 }
 
-.names {
-  margin-top: 300px;
+
+.front_card {
+  padding: 10px;
+
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.reverse_card {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY( 180deg );
+
+  font-size: 1.30rem;
+  font-family: 'Oswald';
+  text-align: center;
+}
+
+.employee {
+  max-width: 800px;
+  height: 900px;
+
+  padding-left: 0px;
+  flex: 10 10 100px;
+}
+
+
+.card_body {
+    font-size: 1.30rem;
+    font-family: 'Oswald';
+    text-align: center;
+
+    margin-top: 350px;
 }
